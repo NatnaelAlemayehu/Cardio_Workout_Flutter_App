@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                   MaterialButton(
                     onPressed: () {},
                     child: Text("Login", style: TextStyle(color: Colors.white)),
-                    color: Colors.blueAccent,
+                    color: Colors.purple,
                   )
                 ],
               )
