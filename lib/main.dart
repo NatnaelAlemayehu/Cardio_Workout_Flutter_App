@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
+          fontFamily: 'NotoSans',
           primarySwatch: Colors.purple,
         ),
         debugShowCheckedModeBanner: false,

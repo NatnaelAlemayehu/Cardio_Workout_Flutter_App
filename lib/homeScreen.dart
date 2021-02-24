@@ -25,41 +25,40 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: GridView.count(
         crossAxisCount: 1,
-        padding: EdgeInsets.all(16.0),
-        childAspectRatio: 2.5,
-        crossAxisSpacing: 10.0,
-        mainAxisSpacing: 10.0,
+        // padding: EdgeInsets.all(16.0),
+        childAspectRatio: 2.0,
+        // crossAxisSpacing: 10.0,
+        // mainAxisSpacing: 10.0,
         children: <Widget>[
-          myGridItems("Beginner", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-exercising-planks-at-home-in-los-angeles-royalty-free-image-1587667600.jpg", (0xFFb765d3), (0xffffffff) ),
-          myGridItems("Intermediate", "https://www.ymcasv.org/sites/0702-openy-ymcasv.org/files/styles/feature_card/public/2020-08/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg?itok=0Sw8zgO6", (0xffffffff), (0x00000000) ),
-          myGridItems("Advanced", "https://artimg.gympik.com/articles/wp-content/uploads/2018/10/shutterstock_644395591.jpg", (0xffffffff), (0xffff0000)),
+          myGridItems("Beginner", "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/calisthenics_for_lifters_-_800x500.jpg", ),
+          myGridItems("Intermediate", "http://no-filter.in/wp-content/uploads/2020/08/weightless-workout.jpg", ),
+          myGridItems("Advanced", "https://artimg.gympik.com/articles/wp-content/uploads/2018/10/shutterstock_644395591.jpg",),
           ],
         )
     );
   }
 
 
-  Widget myGridItems(String gridName, String gridimage, int color1,
-      int color2) {
+  Widget myGridItems(String gridName, String gridimage,) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24.0),
-        gradient: new LinearGradient(
-          colors: [
-            Color(color1),
-            Color(color2)
-          ],
-          begin: Alignment.centerLeft,
-          end: new Alignment(1.0, 1.0),
-        ),
+        // borderRadius: BorderRadius.circular(24.0),
+        // gradient: new LinearGradient(
+        //   colors: [
+        //     // Color(color1),
+        //     // Color(color2)
+        //   ],
+        //   begin: Alignment.centerLeft,
+        //   end: new Alignment(1.0, 1.0),
+        // ),
       ),
       child: Stack(
           children: <Widget>[
             Opacity(
-              opacity: 0.3,
+              opacity: 1.0,
               child: Container(
                 decoration: new BoxDecoration(
-                  borderRadius: BorderRadius.circular(24.0),
+                  // borderRadius: BorderRadius.circular(24.0),
                 image: DecorationImage(
                   image: new NetworkImage(
                     gridimage),
