@@ -74,11 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(child:Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget> [
-                    Container(child: Text("============", style: TextStyle(color: Colors.white, fontSize: 16),)),
+                    Container(child: Text(".", style: TextStyle(color: Colors.white, fontSize: 26),)),
                     SizedBox(width:10.0),
-                    Container(child: Icon(FontAwesomeIcons.anchor, color: Colors.white,)),
+                    Container(child: Icon(FontAwesomeIcons.heartBroken, color: Colors.white,)),
                     SizedBox(width:10.0),
-                    Container(child: Text("+++++++++++++", style: TextStyle(color: Colors.white, fontSize: 16),)),
+                    Container(child: Text(".", style: TextStyle(color: Colors.white, fontSize: 26),)),
                     ],
                   )),
                    SizedBox(height:10.0),
