@@ -1,4 +1,4 @@
-# fitness_app
+# final_project_v1
 
 A new Flutter application.
 
