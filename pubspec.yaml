@@ -59,9 +59,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Pacifico
+    - family: NotoSans
       fonts:
-        - asset: assets/font/Pacifico-Regular.ttf
+        - asset: assets/font/NotoSans-Regular.ttf
+        - asset: assets/font/NotoSans-Bold.ttf
+          weight: 700
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
