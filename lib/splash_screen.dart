@@ -4,29 +4,26 @@ import 'package:fitness_screen/home_screen.dart';
 import 'package:fitness_screen/login_screen.dart';
 import 'dart:async';
 
-
-
 class SplashScreen extends StatefulWidget {
+  static const String id = "splash_screen";
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
 
-    _mockCheckForSession().then(
-            (status) {
-          if (status) {
-            _navigateToHome();
-          } else {
-            _navigateToLogin();
-          }
-        }
-    );
+    _mockCheckForSession().then((status) {
+      if (status) {
+        _navigateToHome();
+      } else {
+        _navigateToLogin();
+      }
+    });
   }
-
 
   Future<bool> _mockCheckForSession() async {
     await Future.delayed(Duration(milliseconds: 6000), () {});
@@ -34,22 +31,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return true;
   }
 
-  void _navigateToHome(){
-    Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-            builder: (BuildContext context) => HomeScreen()
-        )
-    );
+  void _navigateToHome() {
+    Navigator.pushNamed(context, HomeScreen.id);
   }
 
-  void _navigateToLogin(){
-    Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-            builder: (BuildContext context) => LoginScreen()
-        )
-    );
+  void _navigateToLogin() {
+    Navigator.pushNamed(context, LoginScreen.id);
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -61,16 +49,14 @@ class _SplashScreenState extends State<SplashScreen> {
             children: <Widget>[
               SizedBox(
                 child: new Opacity(
-                    opacity: 1,
-                    child: Image.asset('assets/images/fitness.jpg',
-                    fit: BoxFit.cover,
-                        color: Color.fromRGBO(255, 255, 255, 0.0),
-                        colorBlendMode: BlendMode.luminosity),
+                  opacity: 1,
+                  child: Image.asset('assets/images/fitness.jpg',
+                      fit: BoxFit.cover,
+                      color: Color.fromRGBO(255, 255, 255, 0.0),
+                      colorBlendMode: BlendMode.luminosity),
                 ),
                 height: 2000.0,
               ),
-
-
               Shimmer.fromColors(
                 period: Duration(milliseconds: 1500),
                 baseColor: Color(0xff7f00ff),
@@ -86,10 +72,8 @@ class _SplashScreenState extends State<SplashScreen> {
                           Shadow(
                               blurRadius: 18.0,
                               color: Colors.black87,
-                              offset: Offset.fromDirection(120, 12)
-                          )
-                        ]
-                    ),
+                              offset: Offset.fromDirection(120, 12))
+                        ]),
                   ),
                 ),
               )
@@ -99,6 +83,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-
-
 }

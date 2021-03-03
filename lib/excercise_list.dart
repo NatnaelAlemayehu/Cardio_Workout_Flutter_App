@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fitness_screen/daily_excercise.dart';
 
 class ExcerciseList extends StatefulWidget {
+  static const String id = "excercise_list";
+
   @override
   _ExcerciseListState createState() => _ExcerciseListState();
 }
@@ -12,32 +14,6 @@ class _ExcerciseListState extends State<ExcerciseList> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Excercise List'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Item 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
       ),
       body: SafeArea(
         child: Padding(
@@ -76,11 +52,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.fitWidth,
-                    image: NetworkImage(
-                        'https://artimg.gympik.com/articles/wp-content/uploads/2018/10/shutterstock_644395591.jpg'),
+                    image: AssetImage('assets/images/excercise_list.jpg'),
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                  color: Colors.redAccent,
                 ),
               ),
               SizedBox(
@@ -91,14 +65,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                   physics: BouncingScrollPhysics(),
                   children: [
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -126,14 +97,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -145,7 +113,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 2',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -161,14 +129,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -180,7 +145,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 3',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -196,14 +161,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -215,7 +177,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 4',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -231,14 +193,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -250,7 +209,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 5',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -266,14 +225,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -285,7 +241,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 6',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -301,14 +257,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -320,7 +273,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 7',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -336,14 +289,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -355,7 +305,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 8',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -371,14 +321,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -390,7 +337,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 9',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -406,14 +353,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -425,7 +369,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 10',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -441,14 +385,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -460,7 +401,7 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 11',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
@@ -476,14 +417,11 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      DailyExcercise()));
+                          Navigator.pushNamed(context, DailyExcercise.id);
                         },
                         child: Container(
                           width: double.infinity,
@@ -495,7 +433,103 @@ class _ExcerciseListState extends State<ExcerciseList> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Day 1',
+                                  'Day 12',
+                                  style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text('18 Excercises'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      color: const Color(0xffDCDBF1),
+                      child: InkWell(
+                        splashColor: const Color(0xffEB10FE),
+                        onTap: () {
+                          Navigator.pushNamed(context, DailyExcercise.id);
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: 70,
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Day 13',
+                                  style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text('18 Excercises'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      color: const Color(0xffDCDBF1),
+                      child: InkWell(
+                        splashColor: const Color(0xffEB10FE),
+                        onTap: () {
+                          Navigator.pushNamed(context, DailyExcercise.id);
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: 70,
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Day 14',
+                                  style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text('18 Excercises'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      color: const Color(0xffDCDBF1),
+                      child: InkWell(
+                        splashColor: const Color(0xffEB10FE),
+                        onTap: () {
+                          Navigator.pushNamed(context, DailyExcercise.id);
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: 70,
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Day 15',
                                   style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold),
