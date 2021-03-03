@@ -3,6 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:fitness_screen/single_excercise.dart';
 
 class DailyExcercise extends StatefulWidget {
+  static const String id = "daily_excercise";
+
   @override
   _DailyExcerciseState createState() => _DailyExcerciseState();
 }
@@ -13,32 +15,6 @@ class _DailyExcerciseState extends State<DailyExcercise> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Daily Excercise'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Item 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
       ),
       body: Column(
         children: [
@@ -53,7 +29,7 @@ class _DailyExcerciseState extends State<DailyExcercise> {
                     image: AssetImage('assets/images/workout.jpg'),
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                  color: Colors.redAccent,
+                  // color: Colors.redAccent,
                 ),
               ),
               Positioned(
@@ -624,8 +600,7 @@ class _DailyExcerciseState extends State<DailyExcercise> {
           height: 55,
           child: RaisedButton(
             onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => SingleExcercise()));
+              Navigator.pushNamed(context, SingleExcercise.id);
             },
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(80.0)),

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SingleExcercise extends StatefulWidget {
+  static const String id = "single_excercise";
+
   @override
   _SingleExcerciseState createState() => _SingleExcerciseState();
 }
@@ -12,32 +14,6 @@ class _SingleExcerciseState extends State<SingleExcercise> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Workout'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Item 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
       ),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,

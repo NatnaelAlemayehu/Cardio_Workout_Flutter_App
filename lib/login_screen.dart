@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
+  static const String id = "login_screen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,30 +16,22 @@ class LoginScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.all(8.0),
                     child: TextField(
-                      decoration: InputDecoration(
-                          hintText: "Enter Username"
-                      ),
+                      decoration: InputDecoration(hintText: "Enter Username"),
                     ),
                   ),
-
                   Container(
                     margin: EdgeInsets.all(8.0),
                     child: TextField(
-                      decoration: InputDecoration(
-                          hintText: "Enter Password"
-                      ),
+                      decoration: InputDecoration(hintText: "Enter Password"),
                     ),
                   ),
-
                   MaterialButton(
                     onPressed: () {},
                     child: Text("Login", style: TextStyle(color: Colors.white)),
                     color: Colors.purple,
                   )
                 ],
-              )
-          ),
-        )
-    );
+              )),
+        ));
   }
 }
