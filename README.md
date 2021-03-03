@@ -15,10 +15,10 @@ Our apps intuitive and eyecatching design allows us to stand apart from other ap
 
 ## Functionality
 
--> Users can choose their level of workout exercises they want to do
--> Users get list of customer daily exercises for their chosen level
--> Users can get the skip or go to a previous exercise if they want to
--> Users can signup/login to save their daily progress and profile information
+-> Users can choose their level of workout exercises they want to do <br />
+-> Users get list of customer daily exercises for their chosen level <br />
+-> Users can get the skip or go to a previous exercise if they want to <br />
+-> Users can signup/login to save their daily progress and profile information <br />
 
 Note: Signup/login functionality is not implemented yet, but shall be in near releases.
 
