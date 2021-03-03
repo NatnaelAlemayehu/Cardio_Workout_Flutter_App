@@ -65,9 +65,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                   physics: BouncingScrollPhysics(),
                   children: [
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -97,9 +97,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -129,9 +129,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -161,9 +161,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -193,9 +193,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -225,9 +225,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -257,9 +257,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -289,9 +289,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -321,9 +321,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -353,9 +353,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -385,9 +385,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -417,9 +417,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -449,9 +449,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -481,9 +481,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
@@ -513,9 +513,9 @@ class _ExcerciseListState extends State<ExcerciseList> {
                       ),
                     ),
                     Card(
-                      color: Colors.blue[100],
+                      color: const Color(0xffDCDBF1),
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
+                        splashColor: const Color(0xffEB10FE),
                         onTap: () {
                           Navigator.pushNamed(context, DailyExcercise.id);
                         },
