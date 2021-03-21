@@ -5,6 +5,15 @@ import 'package:fitness_screen/exercise_screens/single_excercise.dart';
 class DailyExcercise extends StatefulWidget {
   static const String id = "daily_excercise";
 
+  final int day;
+  final String level;
+
+  DailyExcercise({
+    Key key,
+    this.day,
+    this.level,
+  }) : super(key: key);
+
   @override
   _DailyExcerciseState createState() => _DailyExcerciseState();
 }

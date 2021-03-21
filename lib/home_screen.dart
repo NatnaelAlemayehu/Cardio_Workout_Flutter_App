@@ -23,7 +23,11 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, ExcerciseList.id);
+                Navigator.pushNamed(
+                  context,
+                  ExcerciseList.id,
+                  arguments: ExcerciseList(level: 'Beginner'),
+                );
               },
               child: Stack(
                 children: [
@@ -86,7 +90,11 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, ExcerciseList.id);
+                Navigator.pushNamed(
+                  context,
+                  ExcerciseList.id,
+                  arguments: ExcerciseList(level: 'Intermediate'),
+                );
               },
               child: Stack(
                 children: [
@@ -149,7 +157,11 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, ExcerciseList.id);
+                Navigator.pushNamed(
+                  context,
+                  ExcerciseList.id,
+                  arguments: ExcerciseList(level: 'Advanced'),
+                );
               },
               child: Stack(
                 children: [

@@ -1,17 +1,22 @@
-import 'package:fitness_screen/classes/exerciseList.dart';
+import 'package:fitness_screen/classes/workout_exercise.dart';
 
 class Days {
-  String dayNumber;
+  int dayNumber;
   int caloriesBurned;
   int totalWorkoutMinutes;
   int workoutCount;
-  List<WorkoutExercise> ExerciseList = [];
+  List<WorkoutExercise> exerciseList = [];
 
-  Days(String dayNumber, int caloriesBurned, int totalWorkoutMinutes,
-      int workoutCount) {
+  Days(
+      {int dayNumber,
+      int caloriesBurned,
+      int totalWorkoutMinutes,
+      int workoutCount,
+      List<WorkoutExercise> exerciseList}) {
     this.dayNumber = dayNumber;
     this.caloriesBurned = caloriesBurned;
     this.totalWorkoutMinutes = totalWorkoutMinutes;
     this.workoutCount = workoutCount;
+    this.exerciseList = exerciseList;
   }
 }
