@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fitness_screen/daily_excercise.dart';
+import 'package:fitness_screen/exercise_screens/daily_excercise.dart';
 
 class ExcerciseList extends StatefulWidget {
   static const String id = "excercise_list";

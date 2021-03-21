@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fitness_screen/excercise_list.dart';
+import 'package:fitness_screen/exercise_screens/excercise_list.dart';
+import 'package:fitness_screen/menu_screens/menu_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = "home_screen";
@@ -16,64 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('Cardio'),
       ),
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Cardio Exercise'),
-              decoration: BoxDecoration(
-                color: Color(0xff9C27B0),
-              ),
-            ),
-            ListTile(
-              title: Text('Profile'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Settings'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('About us'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Rate the app'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: Menudrawer(),
       body: Column(
-        //crossAxisCount: 1,
-        // padding: EdgeInsets.all(16.0),
-        // childAspectRatio: 2,
-        // crossAxisSpacing: 10.0,
-        // mainAxisSpacing: 10.0,
-        // children: <Widget>[
-        //   myGridItems(
-        //     "Beginner",
-        //     "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/calisthenics_for_lifters_-_800x500.jpg",
-        //   ),
-        //   myGridItems(
-        //     "Intermediate",
-        //     "http://no-filter.in/wp-content/uploads/2020/08/weightless-workout.jpg",
-        //   ),
-        //   myGridItems(
-        //     "Advanced",
-        //     "https://artimg.gympik.com/articles/wp-content/uploads/2018/10/shutterstock_644395591.jpg",
-        //   ),
-        // ],
         children: [
           Expanded(
             child: GestureDetector(
