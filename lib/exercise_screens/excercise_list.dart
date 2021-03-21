@@ -2,10 +2,11 @@ import 'package:fitness_screen/classes/exercise.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_screen/exercise_screens/daily_excercise.dart';
 import 'package:fitness_screen/classes/list_card_generator.dart';
+import 'package:fitness_screen/classes/screen_arguments.dart';
 
 class ExcerciseList extends StatefulWidget {
   static const String id = "excercise_list";
-
+  //final ScreenArguments args = ModalRoute.of(context).settings.arguments;
   final String level;
 
   const ExcerciseList({

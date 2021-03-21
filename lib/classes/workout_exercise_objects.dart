@@ -21,15 +21,15 @@ class WorkoutExerciseObjectGenerator {
     for (var workoutName in workoutNames) {
       beginnersDay1Workout.add(
         WorkoutExercise(
-          gifUrl: "assets/$workoutName.gif",
+          gifUrl: "assets/workout_gifs/$workoutName.gif",
           workoutName: workoutName,
           prevWorkoutGifUrl: workoutNames.indexOf(workoutName) != 0
-              ? workoutNames.indexOf(workoutName) - 1
+              ? "assets/workout_gifs/${workoutNames[workoutNames.indexOf(workoutName) - 1]}.gif"
               : "",
-          nextWorkoutGifUrl:
-              workoutNames.indexOf(workoutName) != workoutNames.length
-                  ? workoutNames.indexOf(workoutName) + 1
-                  : "",
+          nextWorkoutGifUrl: workoutNames.indexOf(workoutName) !=
+                  workoutNames.length - 1
+              ? "assets/workout_gifs/${workoutNames[workoutNames.indexOf(workoutName) + 1]}.gif"
+              : "",
           seconds: 10,
           minutes: 1,
         ),

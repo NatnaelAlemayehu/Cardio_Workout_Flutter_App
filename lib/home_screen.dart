@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fitness_screen/exercise_screens/excercise_list.dart';
 import 'package:fitness_screen/menu_screens/menu_drawer.dart';
+import 'package:fitness_screen/classes/screen_arguments.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = "home_screen";
@@ -23,10 +24,18 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(
+                // Navigator.pushNamed(
+                //   context,
+                //   ExcerciseList.id,
+                //   arguments: ScreenArguments(
+                //     name: 'Beginner',
+                //   ),
+                // );
+                Navigator.push(
                   context,
-                  ExcerciseList.id,
-                  arguments: ExcerciseList(level: 'Beginner'),
+                  MaterialPageRoute(
+                    builder: (context) => ExcerciseList(level: 'Beginner'),
+                  ),
                 );
               },
               child: Stack(
@@ -90,11 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  ExcerciseList.id,
-                  arguments: ExcerciseList(level: 'Intermediate'),
-                );
+                // Navigator.pushNamed(
+                //   context,
+                //   ExcerciseList.id,
+                //   arguments: ScreenArguments(
+                //     name: 'Intermediate',
+                //   ),
+                // );
               },
               child: Stack(
                 children: [
@@ -156,13 +167,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Expanded(
             child: GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  ExcerciseList.id,
-                  arguments: ExcerciseList(level: 'Advanced'),
-                );
-              },
+              // onTap: () {
+              //   Navigator.pushNamed(
+              //     context,
+              //     ExcerciseList.id,
+              //     arguments: ScreenArguments(
+              //       name: 'Advanced',
+              //     ),
+              //   );
+              // },
               child: Stack(
                 children: [
                   Container(

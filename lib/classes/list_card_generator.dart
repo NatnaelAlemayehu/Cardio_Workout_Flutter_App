@@ -29,7 +29,7 @@ class CardGenerator {
         break;
     }
 
-    for (int i = 1; i <= 30; i++) {
+    for (int i = 1; i <= days.length; i++) {
       cards.add(CardList(day: i, level: level));
     }
 
