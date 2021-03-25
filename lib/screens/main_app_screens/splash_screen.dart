@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:fitness_screen/home_screen.dart';
-import 'file:///C:/Users/Nati/AndroidStudioProjects/Cardio_Workout_Flutter_App/lib/login_screens/login_screen.dart';
-import 'dart:async';
+import './home_screen.dart';
+import './login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String id = "splash_screen";

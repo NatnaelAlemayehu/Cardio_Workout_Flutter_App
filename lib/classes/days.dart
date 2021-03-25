@@ -1,18 +1,18 @@
-import 'package:fitness_screen/classes/workout_exercise.dart';
+import './workout_exercise.dart';
 
-class Days {
+class Day {
   int dayNumber;
   int caloriesBurned;
   int totalWorkoutMinutes;
   int workoutCount;
-  List<WorkoutExercise> exerciseList = [];
+  List<dynamic> exerciseList = [];
 
-  Days(
+  Day(
       {int dayNumber,
       int caloriesBurned,
       int totalWorkoutMinutes,
       int workoutCount,
-      List<WorkoutExercise> exerciseList}) {
+      List<dynamic> exerciseList}) {
     this.dayNumber = dayNumber;
     this.caloriesBurned = caloriesBurned;
     this.totalWorkoutMinutes = totalWorkoutMinutes;

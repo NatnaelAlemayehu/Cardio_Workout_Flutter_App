@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fitness_screen/menu_screens/profile.dart';
-import 'package:fitness_screen/menu_screens/reminder.dart';
-import 'package:fitness_screen/menu_screens/report.dart';
-import 'package:fitness_screen/menu_screens/settings.dart';
-import 'package:fitness_screen/menu_screens/sync_workout.dart';
+import './profile.dart';
+import './reminder.dart';
+import './report.dart';
+import './settings.dart';
+import './sync_workout.dart';
 
 class Menudrawer extends StatelessWidget {
   const Menudrawer({

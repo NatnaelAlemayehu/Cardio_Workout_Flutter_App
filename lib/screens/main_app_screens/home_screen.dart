@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fitness_screen/exercise_screens/excercise_list.dart';
-import 'package:fitness_screen/menu_screens/menu_drawer.dart';
-import 'package:fitness_screen/classes/screen_arguments.dart';
+import './excercise_list.dart';
+import '../menu_screens/menu_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = "home_screen";
@@ -24,19 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                // Navigator.pushNamed(
-                //   context,
-                //   ExcerciseList.id,
-                //   arguments: ScreenArguments(
-                //     name: 'Beginner',
-                //   ),
-                // );
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ExcerciseList(level: 'Beginner'),
                   ),
                 );
+                // Navigator.pushNamed(
+                //   context,
+                //   ExcerciseList.id,
+                //   arguments: ExcerciseList(level: 'Beginner'),
+                // );
               },
               child: Stack(
                 children: [
@@ -99,12 +96,16 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GestureDetector(
               onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExcerciseList(level: 'Intermediate'),
+                  ),
+                );
                 // Navigator.pushNamed(
                 //   context,
                 //   ExcerciseList.id,
-                //   arguments: ScreenArguments(
-                //     name: 'Intermediate',
-                //   ),
+                //   arguments: ExcerciseList(level: 'Intermediate'),
                 // );
               },
               child: Stack(
@@ -167,15 +168,19 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Expanded(
             child: GestureDetector(
-              // onTap: () {
-              //   Navigator.pushNamed(
-              //     context,
-              //     ExcerciseList.id,
-              //     arguments: ScreenArguments(
-              //       name: 'Advanced',
-              //     ),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExcerciseList(level: 'Advanced'),
+                  ),
+                );
+                // Navigator.pushNamed(
+                //   context,
+                //   ExcerciseList.id,
+                //   arguments: ExcerciseList(level: 'Advanced'),
+                // );
+              },
               child: Stack(
                 children: [
                   Container(

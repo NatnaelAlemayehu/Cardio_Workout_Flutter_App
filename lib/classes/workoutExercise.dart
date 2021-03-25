@@ -1,4 +1,4 @@
-import 'package:fitness_screen/classes/exercise.dart';
+import './exercise.dart';
 
 class WorkoutExercise extends Exercise {
   String gifUrl;
