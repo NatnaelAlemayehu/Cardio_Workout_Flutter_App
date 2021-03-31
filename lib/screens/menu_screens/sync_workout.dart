@@ -10,6 +10,13 @@ class SyncWorkout extends StatefulWidget {
 class _SyncWorkoutState extends State<SyncWorkout> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [Text('hi')],
+        ),
+      ),
+    );
   }
 }

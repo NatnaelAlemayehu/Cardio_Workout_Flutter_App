@@ -14,7 +14,7 @@ class WorkoutDayObjectGenerator {
 
   List<Day> addDays() {
     var obj = allexercises[this.level];
-    var myList = new List();
+    var myList = [];
     obj.forEach((key, value) {
       myList = value['exercises'];
       dayObjList.add(Day(

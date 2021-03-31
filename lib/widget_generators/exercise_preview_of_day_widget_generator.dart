@@ -1,4 +1,4 @@
-import './exercises_of_a_day_widget.dart';
+import '../widgets/exercises_of_a_day_widget.dart';
 import '../json_data/exercise_json.dart';
 
 class DayExerciseListGenerator {
@@ -12,7 +12,7 @@ class DayExerciseListGenerator {
   }
 
   List<ExercisePreviewOfaDay> generate() {
-    var Exercises = new List();
+    var Exercises = [];
     Exercises = allexercises[this.level][this.day.toString()]['exercises'];
 
     for (int i = 0; i < Exercises.length; i++) {
@@ -20,8 +20,8 @@ class DayExerciseListGenerator {
         ExercisePreviewOfaDay(
             name: Exercises[i]['name'],
             reps: Exercises[i]['reps'],
-            minute: Exercises[i]['minutes'],
-            second: Exercises[i]['seconds']),
+            minute: Exercises[i]['minute'],
+            second: Exercises[i]['second']),
       );
     }
     return cards;

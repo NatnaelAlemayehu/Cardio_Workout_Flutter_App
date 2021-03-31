@@ -10,6 +10,13 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [Text('hi')],
+        ),
+      ),
+    );
   }
 }

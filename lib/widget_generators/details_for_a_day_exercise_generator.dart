@@ -14,7 +14,7 @@ class DetailsForaDayExerciseGenerator {
   Widget generate() {
     print(this.level);
     var exerciseObj = allexercises[this.level][this.day.toString()];
-    var exerciseList = new List();
+    var exerciseList = [];
     exerciseList = exerciseObj['exercises'];
     return DetailsForaDayExercise(
       exerciseCount: exerciseList.length,

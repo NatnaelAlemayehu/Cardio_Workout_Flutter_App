@@ -51,9 +51,13 @@ class _ExercisePreviewOfaDayState extends State<ExercisePreviewOfaDay> {
                     ),
                     Text(widget.reps != 0
                         ? 'X ${widget.reps}'
-                        : widget.minute != 0
-                            ? '${widget.minute} : ${widget.second}'
-                            : '${widget.second}'),
+                        : widget.minute != 0 && widget.second != 0
+                            ? '${widget.minute} minute and ${widget.second} second'
+                            : widget.minute != 0 && widget.second == 0
+                                ? '${widget.minute} minute'
+                                : widget.minute == 0 && widget.second != 0
+                                    ? '${widget.second} second'
+                                    : 'null'),
                   ],
                 ),
                 decoration: BoxDecoration(

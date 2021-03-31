@@ -10,6 +10,13 @@ class Report extends StatefulWidget {
 class _ReportState extends State<Report> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [Text('hi')],
+        ),
+      ),
+    );
   }
 }

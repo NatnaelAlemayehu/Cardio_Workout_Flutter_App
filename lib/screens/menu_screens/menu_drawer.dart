@@ -4,6 +4,8 @@ import './reminder.dart';
 import './report.dart';
 import './settings.dart';
 import './sync_workout.dart';
+import '../login_screens/login.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class Menudrawer extends StatelessWidget {
   const Menudrawer({
@@ -20,7 +22,10 @@ class Menudrawer extends StatelessWidget {
           DrawerHeader(
             child: Text('Cardio Exercise'),
             decoration: BoxDecoration(
-              color: Color(0xff9C27B0),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/cardioCover.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           ListTile(
@@ -32,25 +37,27 @@ class Menudrawer extends StatelessWidget {
           ListTile(
             title: Text('Report'),
             onTap: () {
-              Navigator.pop(context, Report.id);
+              Navigator.pushNamed(context, Report.id);
             },
           ),
           ListTile(
             title: Text('Settings'),
             onTap: () {
-              Navigator.pop(context, Settings.id);
+              Navigator.pushNamed(context, Settings.id);
             },
           ),
           ListTile(
             title: Text('Reminder'),
             onTap: () {
-              Navigator.pop(context, Reminder.id);
+              Navigator.pushNamed(context, Reminder.id);
             },
           ),
           ListTile(
             title: Text('Sync Workout Data'),
-            onTap: () {
-              Navigator.pop(context, SyncWorkout.id);
+            onTap: () async {
+              WidgetsFlutterBinding.ensureInitialized();
+              await Firebase.initializeApp();
+              Navigator.pushNamed(context, LoginPage.id);
             },
           ),
         ],

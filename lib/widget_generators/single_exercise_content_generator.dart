@@ -14,7 +14,7 @@ class SingleExerciseContentGenerator {
   }
 
   SingleExerciseWidget generate() {
-    var Exercises = new List();
+    var Exercises = [];
     Exercises = allexercises[this.level][this.day.toString()]['exercises'];
     this.exerciseListLength = Exercises.length;
     return SingleExerciseWidget(

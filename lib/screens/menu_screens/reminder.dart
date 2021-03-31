@@ -10,6 +10,13 @@ class Reminder extends StatefulWidget {
 class _ReminderState extends State<Reminder> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [Text('hi')],
+        ),
+      ),
+    );
   }
 }

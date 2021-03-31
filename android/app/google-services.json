@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "21491679084",
+    "project_id": "cardio-workout-d0a68",
+    "storage_bucket": "cardio-workout-d0a68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21491679084:android:3e04929a2fbcf64f2dbd49",
+        "android_client_info": {
+          "package_name": "com.example.cardio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21491679084-fq92u52fm5k0r03gp9j8r0panuji9e98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsaULaYBedYiVwM3r3P-ZhGqqTx_pd6CE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21491679084-fq92u52fm5k0r03gp9j8r0panuji9e98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
