@@ -35,7 +35,7 @@ class _DetailsForaDayExerciseState extends State<DetailsForaDayExercise> {
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
                   ),
-                  Text('Excercises')
+                  Text('Exercises')
                 ],
               ),
               decoration: BoxDecoration(

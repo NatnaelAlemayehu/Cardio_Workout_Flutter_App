@@ -3,7 +3,6 @@ import './profile.dart';
 import './reminder.dart';
 import './report.dart';
 import './settings.dart';
-import './sync_workout.dart';
 import '../login_screens/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 

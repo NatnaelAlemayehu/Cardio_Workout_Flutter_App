@@ -24,7 +24,7 @@ class _DailyExcerciseState extends State<DailyExcercise> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Daily Excercise'),
+        title: Text('Daily Exercise'),
       ),
       body: Column(
         children: [

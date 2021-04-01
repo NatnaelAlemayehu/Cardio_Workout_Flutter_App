@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import './home_screen.dart';
-import './login_screen.dart';
+// import './login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String id = "splash_screen";
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToLogin() {
-    Navigator.pushNamed(context, LoginScreen.id);
+    // Navigator.pushNamed(context, LoginScreen.id);
   }
 
   @override

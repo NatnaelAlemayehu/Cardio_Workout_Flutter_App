@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../screens/main_app_screens/single_excercise.dart';
 import '../widget_generators/time_widget_generator.dart';
+import '../screens/main_app_screens/excercise_list.dart';
 
 class SingleExerciseWidget extends StatefulWidget {
   final int day;
@@ -118,16 +119,30 @@ class _SingleExerciseWidgetState extends State<SingleExerciseWidget> {
                                 borderRadius: BorderRadius.circular(18.0),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SingleExcercise(
-                                        day: widget.day,
+                                if (widget.currentPosition <
+                                    widget.listLength) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SingleExcercise(
+                                          day: widget.day,
+                                          level: widget.level,
+                                          currentPosition:
+                                              widget.currentPosition + 1),
+                                    ),
+                                  );
+                                } else if (widget.currentPosition ==
+                                    widget.listLength) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ExcerciseList(
                                         level: widget.level,
-                                        currentPosition:
-                                            widget.currentPosition + 1),
-                                  ),
-                                );
+                                        animation: true,
+                                      ),
+                                    ),
+                                  );
+                                }
                               },
                               color: Colors.purple[600],
                               textColor: Colors.white,
@@ -206,6 +221,16 @@ class _SingleExerciseWidgetState extends State<SingleExerciseWidget> {
                                 day: widget.day,
                                 level: widget.level,
                                 currentPosition: widget.currentPosition + 1),
+                          ),
+                        );
+                      } else if (widget.currentPosition == widget.listLength) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExcerciseList(
+                              level: widget.level,
+                              animation: true,
+                            ),
                           ),
                         );
                       }

@@ -4,8 +4,13 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 class TimerWidget extends StatelessWidget {
   final int totalSeconds;
   final String countDownTextFormat;
+  final double fontSize;
 
-  const TimerWidget({Key key, this.totalSeconds, this.countDownTextFormat})
+  const TimerWidget(
+      {Key key,
+      this.totalSeconds,
+      this.countDownTextFormat,
+      this.fontSize = 33.0})
       : super(key: key);
 
   @override
@@ -34,7 +39,9 @@ class TimerWidget extends StatelessWidget {
       strokeWidth: 20.0,
       strokeCap: StrokeCap.round,
       textStyle: TextStyle(
-          fontSize: 33.0, color: Colors.black, fontWeight: FontWeight.bold),
+          fontSize: this.fontSize,
+          color: Colors.black,
+          fontWeight: FontWeight.bold),
       textFormat: countDownTextFormat,
       isReverse: true,
       isReverseAnimation: false,
