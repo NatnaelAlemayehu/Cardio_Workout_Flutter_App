@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import './profile.dart';
-import './reminder.dart';
 import './report.dart';
-import './settings.dart';
 import './sync_workout.dart';
 
 class Menudrawer extends StatelessWidget {
@@ -33,18 +31,6 @@ class Menudrawer extends StatelessWidget {
             title: Text('Report'),
             onTap: () {
               Navigator.pop(context, Report.id);
-            },
-          ),
-          ListTile(
-            title: Text('Settings'),
-            onTap: () {
-              Navigator.pop(context, Settings.id);
-            },
-          ),
-          ListTile(
-            title: Text('Reminder'),
-            onTap: () {
-              Navigator.pop(context, Reminder.id);
             },
           ),
           ListTile(
