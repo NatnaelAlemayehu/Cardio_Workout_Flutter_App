@@ -33,13 +33,13 @@ class Menudrawer extends StatelessWidget {
           ListTile(
             title: Text('Report'),
             onTap: () {
-              Navigator.pushNamed(context, Report.id);
+              Navigator.pop(context, Report.id);
             },
           ),
           ListTile(
             title: Text('Sync Workout Data'),
             onTap: () {
-              Navigator.pushNamed(context, SyncWorkout.id);
+              Navigator.pop(context, SyncWorkout.id);
             },
           ),
         ],
