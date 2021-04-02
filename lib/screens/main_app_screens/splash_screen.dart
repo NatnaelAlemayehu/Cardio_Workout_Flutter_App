@@ -1,6 +1,9 @@
+import '../../classes/notification_schedule_class.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import './home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 // import './login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,12 +14,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  Future checkFirstSeen() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool _seen = (prefs.getBool('Before') ?? false);
+    if (!_seen) {
+      await prefs.setBool('Before', true);
+      Notify().schedule();
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-
     _mockCheckForSession().then((status) {
       if (status) {
+        checkFirstSeen();
         _navigateToHome();
       } else {
         _navigateToLogin();
