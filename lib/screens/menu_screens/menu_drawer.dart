@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import './profile.dart';
-import './reminder.dart';
 import './report.dart';
-import './settings.dart';
 import '../login_screens/login.dart';
+import './feed.dart';
+import './policy.dart';
+import './rate.dart';
+import './settings.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class Menudrawer extends StatelessWidget {
@@ -19,7 +21,10 @@ class Menudrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            child: Text('Cardio Exercise'),
+            child: Text(
+              'Cardio Exercise',
+              style: TextStyle(color: Colors.white),
+            ),
             decoration: BoxDecoration(
               image: const DecorationImage(
                 image: AssetImage('assets/images/cardioCover.jpg'),
@@ -34,21 +39,15 @@ class Menudrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Report'),
-            onTap: () {
-              Navigator.pushNamed(context, Report.id);
-            },
-          ),
-          ListTile(
             title: Text('Settings'),
             onTap: () {
               Navigator.pushNamed(context, Settings.id);
             },
           ),
           ListTile(
-            title: Text('Reminder'),
+            title: Text('Report'),
             onTap: () {
-              Navigator.pushNamed(context, Reminder.id);
+              Navigator.pushNamed(context, Report.id);
             },
           ),
           ListTile(
@@ -57,6 +56,24 @@ class Menudrawer extends StatelessWidget {
               WidgetsFlutterBinding.ensureInitialized();
               await Firebase.initializeApp();
               Navigator.pushNamed(context, LoginPage.id);
+            },
+          ),
+          ListTile(
+            title: Text('Feed'),
+            onTap: () {
+              Navigator.pushNamed(context, Feed.id);
+            },
+          ),
+          ListTile(
+            title: Text('Policy'),
+            onTap: () {
+              Navigator.pushNamed(context, Policy.id);
+            },
+          ),
+          ListTile(
+            title: Text('Rate Us'),
+            onTap: () {
+              Navigator.pushNamed(context, Rate.id);
             },
           ),
         ],

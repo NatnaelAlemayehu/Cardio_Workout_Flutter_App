@@ -5,12 +5,14 @@ import 'package:fitness_screen/screens/main_app_screens/excercise_list.dart';
 import 'package:fitness_screen/screens/main_app_screens/home_screen.dart';
 import 'package:fitness_screen/screens/main_app_screens/single_excercise.dart';
 import 'package:fitness_screen/screens/menu_screens/profile.dart';
-import 'package:fitness_screen/screens/menu_screens/reminder.dart';
 import 'package:fitness_screen/screens/menu_screens/report.dart';
 import 'package:fitness_screen/screens/menu_screens/settings.dart';
 import 'package:fitness_screen/screens/menu_screens/sync_workout.dart';
 import 'package:fitness_screen/screens/login_screens/login.dart';
 import 'package:fitness_screen/screens/login_screens/signup.dart';
+import 'package:fitness_screen/screens/menu_screens/feed.dart';
+import 'package:fitness_screen/screens/menu_screens/policy.dart';
+import 'package:fitness_screen/screens/menu_screens/rate.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
         SingleExcercise.id: (context) => SingleExcercise(),
         DailyExcercise.id: (context) => DailyExcercise(),
         Profile.id: (context) => Profile(),
-        Reminder.id: (context) => Reminder(),
+        Rate.id: (context) => Rate(),
+        Feed.id: (context) => Feed(),
+        Policy.id: (context) => Policy(),
         Report.id: (context) => Report(),
         Settings.id: (context) => Settings(),
         SyncWorkout.id: (context) => SyncWorkout(),
