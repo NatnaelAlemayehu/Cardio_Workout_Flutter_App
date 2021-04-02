@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './login.dart';
+import '../menu_screens/sync_workout.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
@@ -106,12 +107,12 @@ class _State extends State<SignupPage> {
                       setState(() {
                         showSpinner = false;
                       });
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => WelcomePage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SyncWorkout(),
+                        ),
+                      );
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'weak-password') {
                         print('The password provided is too weak.');

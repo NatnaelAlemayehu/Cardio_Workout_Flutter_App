@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './signup.dart';
+import '../menu_screens/sync_workout.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
@@ -91,12 +92,12 @@ class _State extends State<LoginPage> {
                       setState(() {
                         showSpinner = true;
                       });
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => WelcomePage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SyncWorkout(),
+                        ),
+                      );
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         print('No user found for that email.');
