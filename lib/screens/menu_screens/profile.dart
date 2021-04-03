@@ -6,6 +6,11 @@ import 'package:fitness_screen/screens/menu_screens/terms_of_use.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:image_picker/image_picker.dart';
+import '../../database/database.dart';
+
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:flutter/widgets.dart';
 
 class Profile extends StatefulWidget {
   static const String id = "profile";
@@ -18,6 +23,40 @@ class _ProfileState extends State<Profile> {
   PickedFile _imageFile;
   final ImagePicker _picker = ImagePicker();
   bool showPassword = false;
+  TextEditingController nameController = TextEditingController()..text = '';
+  TextEditingController ageController = TextEditingController()..text = '';
+  TextEditingController heightController = TextEditingController()..text = '';
+  TextEditingController weightController = TextEditingController()..text = '';
+  String name, profilePicAddress;
+  int height, weight, age;
+  bool savedProfile = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    checker();
+  }
+
+  void checker() async {
+    // print(await User()
+    //     .databaseExists(join(await getDatabasesPath(), 'user_database.db')));
+    if (await User()
+        .databaseExists(join(await getDatabasesPath(), 'best.db'))) {
+      savedProfile = true;
+      List<User> data = await User().listUsers();
+      setState(() {
+        nameController = TextEditingController()..text = data[0].name;
+        ageController = TextEditingController()..text = data[0].age.toString();
+        heightController = TextEditingController()
+          ..text = data[0].height.toString();
+        weightController = TextEditingController()
+          ..text = data[0].weight.toString();
+        profilePicAddress = data[0].profilePicAddress;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,20 +108,24 @@ class _ProfileState extends State<Profile> {
                       width: 130,
                       height: 130,
                       decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 4,
-                              color: Theme.of(context).scaffoldBackgroundColor),
-                          boxShadow: [
-                            BoxShadow(
-                                spreadRadius: 2,
-                                blurRadius: 10,
-                                color: Colors.black.withOpacity(0.1),
-                                offset: Offset(0, 10))
-                          ],
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: _imageFile == null? AssetImage('assets/images/workout.jpg'):FileImage(File(_imageFile.path))),
+                        border: Border.all(
+                            width: 4,
+                            color: Theme.of(context).scaffoldBackgroundColor),
+                        boxShadow: [
+                          BoxShadow(
+                              spreadRadius: 2,
+                              blurRadius: 10,
+                              color: Colors.black.withOpacity(0.1),
+                              offset: Offset(0, 10))
+                        ],
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: savedProfile
+                                ? FileImage(File(profilePicAddress))
+                                : _imageFile == null
+                                    ? AssetImage('assets/images/workout.jpg')
+                                    : FileImage(File(_imageFile.path))),
                       ),
                     ),
                     Positioned(
@@ -102,8 +145,8 @@ class _ProfileState extends State<Profile> {
                           child: InkWell(
                             onTap: () {
                               showModalBottomSheet(
-                                  context: context,
-                                  builder: ((builder) => bottomSheet()),
+                                context: context,
+                                builder: ((builder) => bottomSheet()),
                               );
                             },
                             child: Icon(
@@ -115,14 +158,53 @@ class _ProfileState extends State<Profile> {
                   ],
                 ),
               ),
-
               SizedBox(
                 height: 35,
               ),
-              buildTextField("Full Name", "Dor Alex", false),
-              buildTextField("E-mail", "alexd@gmail.com", false),
-              buildTextField("Password", "********", true),
-              buildTextField("Location", "TLV, Israel", false),
+              TextField(
+                onChanged: (value) {
+                  name = value;
+                },
+                controller: nameController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(
+                        left: 11, right: 3, top: 14, bottom: 14),
+                    border: UnderlineInputBorder(),
+                    hintText: 'Full Name'),
+              ),
+              TextField(
+                onChanged: (value) {
+                  age = int.parse(value);
+                },
+                controller: ageController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(
+                        left: 11, right: 3, top: 14, bottom: 14),
+                    border: UnderlineInputBorder(),
+                    hintText: 'Age'),
+              ),
+              TextField(
+                onChanged: (value) {
+                  weight = int.parse(value);
+                },
+                controller: weightController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(
+                        left: 11, right: 3, top: 14, bottom: 14),
+                    border: UnderlineInputBorder(),
+                    hintText: 'Weight'),
+              ),
+              TextField(
+                onChanged: (value) {
+                  height = int.parse(value);
+                },
+                controller: heightController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(
+                        left: 11, right: 3, top: 14, bottom: 14),
+                    border: UnderlineInputBorder(),
+                    hintText: 'Height'),
+              ),
               SizedBox(
                 height: 35,
               ),
@@ -145,7 +227,27 @@ class _ProfileState extends State<Profile> {
                             color: Colors.black)),
                   ),
                   RaisedButton(
-                    onPressed: () {
+                    onPressed: () async {
+                      if (await User().databaseExists(
+                          join(await getDatabasesPath(), 'best.db'))) {
+                        User(
+                                id: 0,
+                                name: name,
+                                age: age,
+                                height: height,
+                                weight: weight,
+                                profilePicAddress: _imageFile.path)
+                            .updateUser();
+                      } else {
+                        User(
+                                id: 0,
+                                name: name,
+                                age: age,
+                                height: height,
+                                weight: weight,
+                                profilePicAddress: _imageFile.path)
+                            .createUser();
+                      }
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => HomeScreen()));
                     },
@@ -174,33 +276,34 @@ class _ProfileState extends State<Profile> {
   Widget bottomSheet() {
     return Container(
       height: 100.0,
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       margin: EdgeInsets.symmetric(
         horizontal: 20.0,
         vertical: 20.0,
       ),
       child: Column(children: <Widget>[
-        Text("Choose Profile Photo",
-        style: TextStyle(
-          fontSize: 20.0,
-        ),
+        Text(
+          "Choose Profile Photo",
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
         ),
         SizedBox(
           height: 20.0,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget> [
+          children: <Widget>[
             FlatButton.icon(
               icon: Icon(Icons.camera),
-              onPressed: (){
+              onPressed: () {
                 takePhoto(ImageSource.camera);
               },
               label: Text("Camera"),
             ),
             FlatButton.icon(
               icon: Icon(Icons.image),
-              onPressed: (){
+              onPressed: () {
                 takePhoto(ImageSource.gallery);
               },
               label: Text("Gallery"),
@@ -210,14 +313,15 @@ class _ProfileState extends State<Profile> {
       ]),
     );
   }
-void takePhoto(ImageSource source) async{
+
+  void takePhoto(ImageSource source) async {
     final pickedFile = await _picker.getImage(
       source: source,
     );
     setState(() {
       _imageFile = pickedFile;
     });
-}
+  }
 
   Widget buildTextField(
       String labelText, String placeholder, bool isPasswordTextField) {
@@ -228,16 +332,16 @@ void takePhoto(ImageSource source) async{
         decoration: InputDecoration(
             suffixIcon: isPasswordTextField
                 ? IconButton(
-              onPressed: () {
-                setState(() {
-                  showPassword = !showPassword;
-                });
-              },
-              icon: Icon(
-                Icons.remove_red_eye,
-                color: Colors.grey,
-              ),
-            )
+                    onPressed: () {
+                      setState(() {
+                        showPassword = !showPassword;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.remove_red_eye,
+                      color: Colors.grey,
+                    ),
+                  )
                 : null,
             contentPadding: EdgeInsets.only(bottom: 3),
             labelText: labelText,

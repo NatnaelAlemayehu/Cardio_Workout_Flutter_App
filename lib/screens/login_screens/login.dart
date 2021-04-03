@@ -90,7 +90,7 @@ class _State extends State<LoginPage> {
                           await _auth.signInWithEmailAndPassword(
                               email: email, password: password);
                       setState(() {
-                        showSpinner = true;
+                        showSpinner = false;
                       });
                       Navigator.push(
                         context,
