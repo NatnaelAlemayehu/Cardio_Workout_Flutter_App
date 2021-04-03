@@ -11,12 +11,24 @@ class _SyncWorkoutState extends State<SyncWorkout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: SafeArea(
-        child: Column(
-          children: [Text('hi')],
-        ),
-      ),
-    );
+        backgroundColor: Colors.deepPurple,
+        appBar: AppBar(),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Text(
+                  'Sync Successful !',
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+              ),
+              Text(
+                "You can go back now",
+                style: TextStyle(fontSize: 15, color: Colors.white),
+              )
+            ],
+          ),
+        ));
   }
 }
