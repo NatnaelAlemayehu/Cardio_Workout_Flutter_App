@@ -2,6 +2,8 @@ import 'package:fitness_screen/screens/menu_screens/feed.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'settings.dart';
+
 class Rate extends StatefulWidget {
   static const String id = "rate";
   @override
@@ -234,7 +236,7 @@ class _RateState extends State<Rate> {
                     ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => Feed()));
+                          builder: (BuildContext context) => Settings()));
                     }),
               ),
             ),

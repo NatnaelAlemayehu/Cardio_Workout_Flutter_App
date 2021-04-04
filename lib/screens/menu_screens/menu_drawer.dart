@@ -58,24 +58,24 @@ class Menudrawer extends StatelessWidget {
               Navigator.pushNamed(context, LoginPage.id);
             },
           ),
-          ListTile(
-            title: Text('Feed'),
-            onTap: () {
-              Navigator.pushNamed(context, Feed.id);
-            },
-          ),
-          ListTile(
-            title: Text('Policy'),
-            onTap: () {
-              Navigator.pushNamed(context, Policy.id);
-            },
-          ),
-          ListTile(
-            title: Text('Rate Us'),
-            onTap: () {
-              Navigator.pushNamed(context, Rate.id);
-            },
-          ),
+          // ListTile(
+          //   title: Text('Feed'),
+          //   onTap: () {
+          //     Navigator.pushNamed(context, Feed.id);
+          //   },
+          // ),
+          // ListTile(
+          //   title: Text('Policy'),
+          //   onTap: () {
+          //     Navigator.pushNamed(context, Policy.id);
+          //   },
+          // ),
+          // ListTile(
+          //   title: Text('Rate Us'),
+          //   onTap: () {
+          //     Navigator.pushNamed(context, Rate.id);
+          //   },
+          // ),
         ],
       ),
     );

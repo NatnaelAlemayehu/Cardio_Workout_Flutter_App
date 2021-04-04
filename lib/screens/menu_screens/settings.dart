@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../main_app_screens/home_screen.dart';
+
 class Settings extends StatefulWidget {
   static const String id = "settings";
 
@@ -23,7 +25,7 @@ class _SettingsState extends State<Settings> {
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => Profile()));
+                builder: (BuildContext context) => HomeScreen()));
           },
           icon: Icon(
             Icons.arrow_back,
