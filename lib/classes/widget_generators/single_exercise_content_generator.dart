@@ -1,5 +1,5 @@
-import '../widgets/single_exercise_widget.dart';
-import '../json_data/exercise_json.dart';
+import '../../widgets/single_exercise_widget.dart';
+import '../../json_data/exercise_json.dart';
 
 class SingleExerciseContentGenerator {
   int day;

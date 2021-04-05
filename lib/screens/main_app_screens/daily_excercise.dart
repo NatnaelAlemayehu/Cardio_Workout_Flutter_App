@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './single_excercise.dart';
-import '../../widget_generators/exercise_preview_of_day_widget_generator.dart';
-import '../../widget_generators/details_for_a_day_exercise_generator.dart';
+import '../../classes/widget_generators/exercise_preview_of_day_widget_generator.dart';
+import '../../classes/widget_generators/details_for_a_day_exercise_generator.dart';
 
 class DailyExcercise extends StatefulWidget {
   static const String id = "daily_excercise";

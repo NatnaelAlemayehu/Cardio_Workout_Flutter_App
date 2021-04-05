@@ -44,12 +44,12 @@ class Menudrawer extends StatelessWidget {
               Navigator.pushNamed(context, Settings.id);
             },
           ),
-          ListTile(
-            title: Text('Report'),
-            onTap: () {
-              Navigator.pushNamed(context, Report.id);
-            },
-          ),
+          // ListTile(
+          //   title: Text('Report'),
+          //   onTap: () {
+          //     Navigator.pushNamed(context, Report.id);
+          //   },
+          // ),
           ListTile(
             title: Text('Sync Workout Data'),
             onTap: () async {

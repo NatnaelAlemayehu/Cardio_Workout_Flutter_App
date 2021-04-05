@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../json_data/exercise_json.dart';
+import '../../json_data/exercise_json.dart';
 import 'package:fitness_screen/widgets/details_for_a_day_exercise_widget.dart';
 
 class DetailsForaDayExerciseGenerator {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widget_generators/list_card_generator.dart';
+import '../../classes/widget_generators/list_card_generator.dart';
 import 'package:confetti/confetti.dart';
 import 'dart:math';
 

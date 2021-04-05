@@ -4,8 +4,6 @@ import 'package:shimmer/shimmer.dart';
 import './home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// import './login_screen.dart';
-
 class SplashScreen extends StatefulWidget {
   static const String id = "splash_screen";
 
@@ -43,8 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToHome() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (BuildContext context) => HomeScreen()));
+    Navigator.of(context).pushReplacementNamed(HomeScreen.id);
   }
 
   void _navigateToLogin() {

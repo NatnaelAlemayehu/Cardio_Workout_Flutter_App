@@ -14,25 +14,7 @@ import 'package:fitness_screen/screens/menu_screens/feed.dart';
 import 'package:fitness_screen/screens/menu_screens/policy.dart';
 import 'package:fitness_screen/screens/menu_screens/rate.dart';
 
-import 'dart:async';
-import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:flutter/widgets.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final Future<Database> database = openDatabase(
-    join(await getDatabasesPath(), 'user_database.db'),
-    onCreate: (db, version) {
-      // Run the CREATE TABLE statement on the database.
-      return db.execute(
-        "CREATE TABLE user(id INTEGER PRIMARY KEY, name TEXT, age INTEGER, height INTEGER, weight INTEGER, profilePicAddress String)",
-      );
-    },
-    // Set the version. This executes the onCreate function and provides a
-    // path to perform database upgrades and downgrades.
-    version: 1,
-  );
+void main() {
   runApp(MyApp());
 }
 

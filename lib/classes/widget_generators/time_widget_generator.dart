@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
-
-import '../classes/days.dart';
-import '../json_data/exercise_json.dart';
-import '../widgets/timer_widget.dart';
+import '../../json_data/exercise_json.dart';
+import '../../widgets/timer_widget.dart';
 
 class TimeWidgetGenerator {
   int day;

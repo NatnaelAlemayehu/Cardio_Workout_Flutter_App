@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'workout_day_object_generator.dart';
-import '../classes/days.dart';
-import '../widgets/level_card_list.dart';
+import '../../classes/days.dart';
+import '../../widgets/level_card_list.dart';
 
 List<Day> days = [];
 String leveltopass;

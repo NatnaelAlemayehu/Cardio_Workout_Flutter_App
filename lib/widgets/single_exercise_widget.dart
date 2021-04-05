@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/main_app_screens/single_excercise.dart';
-import '../widget_generators/time_widget_generator.dart';
+import '../classes/widget_generators/time_widget_generator.dart';
 import '../screens/main_app_screens/excercise_list.dart';
 
 class SingleExerciseWidget extends StatefulWidget {

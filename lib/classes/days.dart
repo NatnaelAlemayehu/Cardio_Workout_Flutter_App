@@ -1,5 +1,3 @@
-import './workout_exercise.dart';
-
 class Day {
   int dayNumber;
   int caloriesBurned;

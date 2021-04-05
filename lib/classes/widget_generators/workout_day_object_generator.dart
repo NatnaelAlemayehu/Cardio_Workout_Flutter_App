@@ -1,5 +1,5 @@
-import '../classes/days.dart';
-import '../json_data/exercise_json.dart';
+import '../../classes/days.dart';
+import '../../json_data/exercise_json.dart';
 
 class WorkoutDayObjectGenerator {
   int day;
