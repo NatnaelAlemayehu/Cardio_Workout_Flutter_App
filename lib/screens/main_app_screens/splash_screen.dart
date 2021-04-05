@@ -43,7 +43,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToHome() {
-    Navigator.pushNamed(context, HomeScreen.id);
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (BuildContext context) => HomeScreen()));
   }
 
   void _navigateToLogin() {
@@ -61,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(
                 child: new Opacity(
                   opacity: 1,
-                  child: Image.asset('assets/images/fitness.jpg',
+                  child: Image.asset('assets/images/splas.jpg',
                       fit: BoxFit.cover,
                       color: Color.fromRGBO(255, 255, 255, 0.0),
                       colorBlendMode: BlendMode.luminosity),

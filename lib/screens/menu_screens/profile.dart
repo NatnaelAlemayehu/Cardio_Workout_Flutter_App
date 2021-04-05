@@ -73,18 +73,20 @@ class _ProfileState extends State<Profile> {
                 builder: (BuildContext context) => HomeScreen()));
           },
         ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.settings,
-              color: Colors.purple,
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => Settings()));
-            },
-          ),
-        ],
+        //TODO Future updates(settings found in the profile)
+        // actions: [
+        //   IconButton(
+        //     icon: Icon(
+        //       Icons.settings,
+        //       color: Colors.purple,
+        //     ),
+        //     onPressed: () {
+        //       Navigator.of(context).push(MaterialPageRoute(
+        //           builder: (BuildContext context) => Settings()));
+        //     },
+        //   ),
+        // ],
+        //TODO, End of future update
       ),
       body: Container(
         padding: EdgeInsets.only(left: 16, top: 25, right: 16),
