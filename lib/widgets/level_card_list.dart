@@ -26,13 +26,15 @@ class _LevelDaysListState extends State<LevelDaysList> {
       child: InkWell(
         splashColor: const Color(0xffEB10FE),
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>
-                  DailyExcercise(day: widget.day, level: widget.level),
-            ),
-          );
+          if (widget.dayslist[widget.day - 1].workoutCount != 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    DailyExcercise(day: widget.day, level: widget.level),
+              ),
+            );
+          }
           // Navigator.pushNamed(
           //   context,
           //   DailyExcercise.id,

@@ -16,13 +16,31 @@ class Notify {
         android: androidInitialize, iOS: iOSInitialize);
     localNotification = new FlutterLocalNotificationsPlugin();
     localNotification.initialize(initializationSettings);
+    _showInstantNotification();
     _showNotification();
+  }
+
+  Future _showInstantNotification() async {
+    tz.initializeTimeZones();
+    _timezone = await FlutterNativeTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(_timezone));
+    await localNotification.zonedSchedule(
+        0,
+        'Your cardio in safe hands',
+        'We are excited you choose Cardio to level up',
+        tz.TZDateTime.now(tz.local).add(const Duration(seconds: 5)),
+        const NotificationDetails(
+            android: AndroidNotificationDetails(
+                'channel Id', 'Local Notify', 'my description')),
+        androidAllowWhileIdle: true,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime);
   }
 
   tz.TZDateTime _nextInstanceOfTenAM() {
     final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
     tz.TZDateTime scheduledDate =
-        tz.TZDateTime(tz.local, now.year, now.month, now.day, 10, 25);
+        tz.TZDateTime(tz.local, now.year, now.month, now.day, 10);
     if (scheduledDate.isBefore(now)) {
       scheduledDate = scheduledDate.add(const Duration(days: 1));
     }
@@ -34,7 +52,6 @@ class Notify {
     _timezone = await FlutterNativeTimezone.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(_timezone));
     print(_nextInstanceOfTenAM());
-
     await localNotification.zonedSchedule(
         0,
         'Cardio Workout Reminder',

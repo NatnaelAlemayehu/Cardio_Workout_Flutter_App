@@ -31,7 +31,6 @@ class _SettingsState extends State<Settings> {
             Icons.arrow_back,
             color: Colors.purple,
           ),
-
         ),
       ),
       body: Container(
@@ -86,8 +85,10 @@ class _SettingsState extends State<Settings> {
                           builder: (BuildContext context) => Policy()));
                     },
                   ),
-                  Divider( height: 15,
-                    thickness: 2,),
+                  Divider(
+                    height: 15,
+                    thickness: 2,
+                  ),
                   ListTile(
                     leading: Icon(
                       FontAwesomeIcons.envelope,
@@ -100,8 +101,10 @@ class _SettingsState extends State<Settings> {
                           builder: (BuildContext context) => Feed()));
                     },
                   ),
-                  Divider( height: 15,
-                    thickness: 2,),
+                  Divider(
+                    height: 15,
+                    thickness: 2,
+                  ),
                   ListTile(
                     leading: Icon(
                       FontAwesomeIcons.star,
@@ -154,7 +157,7 @@ class _SettingsState extends State<Settings> {
                     borderRadius: BorderRadius.circular(20)),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => Profile()));
+                      builder: (BuildContext context) => HomeScreen()));
                 },
                 child: Text("DONE",
                     style: TextStyle(
@@ -188,5 +191,3 @@ class _SettingsState extends State<Settings> {
     );
   }
 }
-
-

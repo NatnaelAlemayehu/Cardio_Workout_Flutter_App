@@ -25,15 +25,19 @@ class _SingleExcerciseState extends State<SingleExcercise> {
             title: new Text('Are you sure?'),
             content: new Text('Do you want to go back to Home Screen?'),
             actions: <Widget>[
-              new GestureDetector(
-                onTap: () => Navigator.of(context).pop(false),
-                child: Text("NO"),
+              FlatButton(
+                onPressed: () {
+                  Navigator.popUntil(
+                      context, ModalRoute.withName(HomeScreen.id));
+                },
+                child: Text("Yes"),
               ),
-              SizedBox(height: 16),
-              new GestureDetector(
-                onTap: () => Navigator.popUntil(
-                    context, ModalRoute.withName(HomeScreen.id)),
-                child: Text("YES"),
+              FlatButton(
+                onPressed: () {
+                  Navigator.popUntil(
+                      context, ModalRoute.withName(HomeScreen.id));
+                },
+                child: Text("NO"),
               ),
             ],
           ),

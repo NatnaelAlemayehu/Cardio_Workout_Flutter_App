@@ -58,14 +58,14 @@ var allexercises = {
     },
     '5': {
       'exercises': [
-        {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Back and Forth Squat', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Bird Dog', 'reps': 5, 'minute': 5, 'second': 10},
-        {'name': 'High Knees', 'reps': 5, 'minute': 10, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
+        // {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Back and Forth Squat', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Bird Dog', 'reps': 5, 'minute': 5, 'second': 10},
+        // {'name': 'High Knees', 'reps': 5, 'minute': 10, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
       ],
       'caloriesBurned': 1000,
       'totalWorkoutMinutes': 20,
@@ -128,14 +128,14 @@ var allexercises = {
     },
     '10': {
       'exercises': [
-        {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
-        {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Hero Jumps', 'reps': 5, 'minute': 5, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
+        // {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
+        // {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Hero Jumps', 'reps': 5, 'minute': 5, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
       ],
       'caloriesBurned': 2000,
       'totalWorkoutMinutes': 30,
@@ -198,14 +198,14 @@ var allexercises = {
     },
     '15': {
       'exercises': [
-        {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
-        {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0}
+        // {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
+        // {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0}
       ],
       'caloriesBurned': 2000,
       'totalWorkoutMinutes': 30,
@@ -268,14 +268,14 @@ var allexercises = {
     },
     '20': {
       'exercises': [
-        {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
-        {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
+        // {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
+        // {'name': 'Jumping Jacks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
       ],
       'caloriesBurned': 2000,
       'totalWorkoutMinutes': 30,
@@ -338,14 +338,14 @@ var allexercises = {
     },
     '25': {
       'exercises': [
-        {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
-        {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
-        {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
-        {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
-        {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
+        // {'name': 'Back and Forth Squat', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Bird Dog', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Jump Planks', 'reps': 5, 'minute': 0, 'second': 0},
+        // {'name': 'Jump Rope', 'reps': 5, 'minute': 10, 'second': 10},
+        // {'name': 'Cancan Jump', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Cross Country Run', 'reps': 10, 'minute': 10, 'second': 10},
+        // {'name': 'Frog Jumps', 'reps': 10, 'minute': 0, 'second': 0},
+        // {'name': 'Hero Jumps', 'reps': 10, 'minute': 10, 'second': 10}
       ],
       'caloriesBurned': 2000,
       'totalWorkoutMinutes': 30,

@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:fitness_screen/screens/main_app_screens/home_screen.dart';
 import 'package:fitness_screen/screens/menu_screens/settings.dart';
-import 'package:fitness_screen/screens/menu_screens/terms_of_use.dart';
+
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:image_picker/image_picker.dart';
@@ -30,6 +30,10 @@ class _ProfileState extends State<Profile> {
   String name, profilePicAddress;
   int height, weight, age;
   bool savedProfile = false;
+  final snackBar = SnackBar(content: Text('Profile saved successfully!'));
+
+// Find the ScaffoldMessenger in the widget tree
+// and use it to show a SnackBar.
 
   @override
   void initState() {
@@ -47,11 +51,15 @@ class _ProfileState extends State<Profile> {
       List<User> data = await User().listUsers();
       setState(() {
         nameController = TextEditingController()..text = data[0].name;
+        name = data[0].name;
         ageController = TextEditingController()..text = data[0].age.toString();
+        age = data[0].age;
         heightController = TextEditingController()
           ..text = data[0].height.toString();
+        height = data[0].height;
         weightController = TextEditingController()
           ..text = data[0].weight.toString();
+        weight = data[0].weight;
         profilePicAddress = data[0].profilePicAddress;
       });
     }
@@ -194,7 +202,7 @@ class _ProfileState extends State<Profile> {
                     contentPadding: EdgeInsets.only(
                         left: 11, right: 3, top: 14, bottom: 14),
                     border: UnderlineInputBorder(),
-                    hintText: 'Weight'),
+                    hintText: 'Weight in Kg'),
               ),
               TextField(
                 onChanged: (value) {
@@ -205,12 +213,11 @@ class _ProfileState extends State<Profile> {
                     contentPadding: EdgeInsets.only(
                         left: 11, right: 3, top: 14, bottom: 14),
                     border: UnderlineInputBorder(),
-                    hintText: 'Height'),
+                    hintText: 'Height in Cm'),
               ),
               SizedBox(
                 height: 35,
               ),
-              TermsOfUse(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -238,7 +245,9 @@ class _ProfileState extends State<Profile> {
                                 age: age,
                                 height: height,
                                 weight: weight,
-                                profilePicAddress: _imageFile.path)
+                                profilePicAddress: !savedProfile
+                                    ? _imageFile.path
+                                    : profilePicAddress)
                             .updateUser();
                       } else {
                         User(
@@ -250,8 +259,12 @@ class _ProfileState extends State<Profile> {
                                 profilePicAddress: _imageFile.path)
                             .createUser();
                       }
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => HomeScreen()));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      // Navigator.of(context).push(
+                      //   MaterialPageRoute(
+                      //     builder: (BuildContext context) => HomeScreen(),
+                      //   ),
+                      // );
                     },
                     color: Colors.purple,
                     padding: EdgeInsets.symmetric(horizontal: 50),
@@ -321,6 +334,9 @@ class _ProfileState extends State<Profile> {
       source: source,
     );
     setState(() {
+      if (savedProfile == true) {
+        savedProfile = false;
+      }
       _imageFile = pickedFile;
     });
   }

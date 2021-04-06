@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../screens/main_app_screens/single_excercise.dart';
 import '../classes/widget_generators/time_widget_generator.dart';
 import '../screens/main_app_screens/excercise_list.dart';
+import '../screens/main_app_screens/home_screen.dart';
 
 class SingleExerciseWidget extends StatefulWidget {
   final int day;
@@ -133,14 +134,24 @@ class _SingleExerciseWidgetState extends State<SingleExerciseWidget> {
                                   );
                                 } else if (widget.currentPosition ==
                                     widget.listLength) {
-                                  Navigator.push(
-                                    context,
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //     builder: (context) => ExcerciseList(
+                                  //       level: widget.level,
+                                  //       animation: true,
+                                  //     ),
+                                  //   ),
+                                  // );
+                                  Navigator.of(context).pushAndRemoveUntil(
                                     MaterialPageRoute(
-                                      builder: (context) => ExcerciseList(
+                                      builder: (BuildContext context) =>
+                                          ExcerciseList(
                                         level: widget.level,
                                         animation: true,
                                       ),
                                     ),
+                                    ModalRoute.withName(HomeScreen.id),
                                   );
                                 }
                               },
@@ -224,14 +235,23 @@ class _SingleExerciseWidgetState extends State<SingleExerciseWidget> {
                           ),
                         );
                       } else if (widget.currentPosition == widget.listLength) {
-                        Navigator.push(
-                          context,
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => ExcerciseList(
+                        //       level: widget.level,
+                        //       animation: true,
+                        //     ),
+                        //   ),
+                        // );
+                        Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(
-                            builder: (context) => ExcerciseList(
+                            builder: (BuildContext context) => ExcerciseList(
                               level: widget.level,
                               animation: true,
                             ),
                           ),
+                          ModalRoute.withName(HomeScreen.id),
                         );
                       }
                       // Navigator.pushNamed(

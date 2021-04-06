@@ -14,9 +14,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool _seen = (prefs.getBool('Before') ?? false);
+    bool _seen = (prefs.getBool('FirstTimeRun') ?? false);
     if (!_seen) {
-      await prefs.setBool('Before', true);
+      await prefs.setBool('FirstTimeRun', true);
       Notify().schedule();
     }
   }
@@ -59,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(
                 child: new Opacity(
                   opacity: 1,
-                  child: Image.asset('assets/images/splas.jpg',
+                  child: Image.asset('assets/images/splash2.jpg',
                       fit: BoxFit.cover,
                       color: Color.fromRGBO(255, 255, 255, 0.0),
                       colorBlendMode: BlendMode.luminosity),
