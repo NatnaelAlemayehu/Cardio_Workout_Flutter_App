@@ -26,6 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _mockCheckForSession().then((status) {
       if (status) {
+        Notify()._showInstantNotification();
         checkFirstSeen();
         _navigateToHome();
       } else {
