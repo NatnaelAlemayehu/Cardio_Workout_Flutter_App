@@ -15,8 +15,7 @@ class Notify {
     var initializationSettings = new InitializationSettings(
         android: androidInitialize, iOS: iOSInitialize);
     localNotification = new FlutterLocalNotificationsPlugin();
-    localNotification.initialize(initializationSettings);
-    _showInstantNotification();
+    localNotification.initialize(initializationSettings);    
     _showNotification();
   }
 
