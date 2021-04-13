@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _mockCheckForSession().then((status) {
       if (status) {
-        Notify()._showInstantNotification();
+        // Notify()._showInstantNotification();
         checkFirstSeen();
         _navigateToHome();
       } else {
@@ -60,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(
                 child: new Opacity(
                   opacity: 1,
-                  child: Image.asset('assets/images/splash2.jpg',
+                  child: Image.asset('assets/images/cardiio.jpg',
                       fit: BoxFit.cover,
                       color: Color.fromRGBO(255, 255, 255, 0.0),
                       colorBlendMode: BlendMode.luminosity),
